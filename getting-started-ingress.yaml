@@ -6,6 +6,6 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
     service:
-     name: test
+     name: getting-started
       port:
        number: 80

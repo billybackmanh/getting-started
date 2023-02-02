@@ -4,11 +4,6 @@ metadata:
   name: getting-started
   labels:
     app: getting-started
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: getting-started
   template:
     metadata:
       labels:

@@ -4,7 +4,7 @@ metadata:
   name: getting-started-ingress
 spec:
   rules:
-  - host: frontend.minikube.local
+  - host: gsd.minikube.local
     http:
       paths:
       - path: /

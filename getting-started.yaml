@@ -8,7 +8,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      run: getting-started
+      app: getting-started
   template:
     metadata:
       labels:

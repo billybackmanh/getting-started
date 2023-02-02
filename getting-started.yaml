@@ -1,12 +1,3 @@
-
-metadata: 
-  name: getting-started
-  namespace: default
-spec: 
-  replicas: 2
-  containers:
-  - image: billybackmanh/getting-started:lastest
-
   apiVersion: apps/v1
 kind: Deployment
 metadata:

@@ -1,14 +1,21 @@
-  apiVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: getting-started
-  namespace: default
+  labels:
+    app: getting-started
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: getting-started
+  template:
+    metadata:
+      labels:
+        app: getting-started
     spec:
       containers:
-      - image: phico/frontend:2.0
-        imagePullPolicy: Always
-        name: getting-started
+      - name: getting-started
+        image: billybackmanh/getting-started:latest
         ports:
-        - name: getting-started
-          containerPort: 8300
-        env:
+        - containerPort: 8080

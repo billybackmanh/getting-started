@@ -4,10 +4,15 @@ metadata:
   name: getting-started
   labels:
     app: getting-started
+    spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: getting-started
   template:
-    metadata:
-      labels:
-        app: getting-started
+     metadata:
+       labels:
+         app: getting-started
     spec:
       containers:
       - name: getting-started

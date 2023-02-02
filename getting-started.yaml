@@ -5,8 +5,17 @@ metadata:
   labels:
     app: getting-started
 spec:
-  containers:
-   - name: getting-started
-      image: billybackmanh/getting-started:latest
-       ports:
-       - containerPort: 80
+  replicas: 1
+  selector:
+    matchLabels:
+      app: getting-started
+  template:
+    metadata:
+      labels:
+        app: getting-started
+  spec:
+    containers:
+      - name: getting-started
+        image: billybackmanh/getting-started:latest
+          ports:
+            - containerPort: 80

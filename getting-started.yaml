@@ -3,3 +3,12 @@ kind: Deployment
 metadata:
   name: getting-started
   namespace: default
+    spec:
+      containers:
+      - image: phico/frontend:2.0
+        imagePullPolicy: Always
+        name: getting-started
+        ports:
+        - name: getting-started
+          containerPort: 8300
+        env:

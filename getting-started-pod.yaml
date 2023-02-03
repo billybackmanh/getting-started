@@ -1,3 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: getting-started
+  labels:
+    app: getting-started
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: getting-started
+---
 apiVersion: v1
 kind: Pod
 metadata:

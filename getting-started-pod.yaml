@@ -6,9 +6,7 @@ metadata:
     app: getting-started
 spec:
   replicas: 1
-  selector:
-    matchLabels:
-      app: getting-started
+    app: getting-started
 ---
 apiVersion: v1
 kind: Pod

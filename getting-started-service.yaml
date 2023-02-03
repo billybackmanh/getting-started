@@ -1,14 +1,26 @@
 apiVersion: v1
-kind: Service
+kind: Pod
 metadata:
   name: getting-started
   labels:
     app.kubernetes.io/name: getting-started
 spec:
+  containers:
+  - name: 
+    image: getting-started
+    ports: billybackmanh/getting-started:latest
+      - containerPort: 3000
+        name: getting-started
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: getting-started
+spec:
   selector:
     app.kubernetes.io/name: getting-started
-    app: getting-started
   ports:
+    - name: gsdport
     - protocol: TCP
       port: 3000
       targetPort: 3000

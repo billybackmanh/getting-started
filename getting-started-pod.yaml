@@ -18,10 +18,3 @@ metadata:
   name: getting-started
   labels:
     app.kubernetes.io/name: getting-started
-#spec:
- # containers:
-  #- name: getting-started
-   # image: billybackmanh/getting-started:latest
-    #ports:
-     # - containerPort: 3000
-      #  name: getting-started

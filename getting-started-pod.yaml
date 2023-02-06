@@ -11,10 +11,3 @@ spec:
     image: billybackmanh/getting-started:latest
     ports:
     - containerPort: 3000
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: getting-started
-  labels:
-    app.kubernetes.io/name: getting-started

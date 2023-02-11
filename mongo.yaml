@@ -38,7 +38,7 @@ metadata:
 spec:
   selector:
     app: mongo
-  port:
+  ports:
     - protocol: TCP
       port: 27017
       targetPort: 27017

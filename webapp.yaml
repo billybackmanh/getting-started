@@ -44,8 +44,8 @@ spec:
   type: NodePort
   selector:
     app: webapp
-  port:
+  ports:
     - protocol: TCP
       port: 3000
       targetPort: 3000
-      NodePort: 30000
+      NodePort: 30100

@@ -41,9 +41,11 @@ kind: Service
 metadata:
   name: webapp-service
 spec:
+  type: NodePort
   selector:
     app: webapp
   port:
     - protocol: TCP
       port: 27017
       targetport: 27017
+      NodePort: 30100

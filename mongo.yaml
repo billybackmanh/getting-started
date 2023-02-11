@@ -41,4 +41,4 @@ spec:
   port:
     - protocol: TCP
       port: 27017
-      targetport: 27017
+      targetPort: 27017

@@ -1,24 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-   app.kubernetes.io/name: load-balancer-example
-   labels:
+  name: webapp-deployment
+  labels:
     app: webapp
-   name: webapp-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: webapp
-      app.kubernetes.io/name: load-balancer-example
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: load-balancer-example
+        app: webapp
     spec:
       containers:
-      - image: nanajanashia/k8s-demo-app:v1.0
-        name: webapp
+      - name: webapp
+        image: nanajanashia/k8s-demo-app:v1.0
         ports:
         - containerPort: 3000
         env:

@@ -39,13 +39,16 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  labels:
+    app.kubernetes.io/instance: getting-started-nana
   name: webapp-service
+  namespace: default
 spec:
-  type: NodePort
+  ports:
+    - nodePort: 30100
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
   selector:
     app: webapp
-  ports:
-    - protocol: TCP
-      port: 3000
-      targetPort: 3000
-      nodePort: 30100
+  type: NodePort
